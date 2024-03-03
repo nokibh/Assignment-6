@@ -17,7 +17,7 @@ const postDisply = alls => {
     shadow-xl mb-5`;
     allCard.innerHTML = `
       <figure class= "h-20 w-16 pl-2 mt-4 ">
-      <img  src="${all.image}" alt="" />
+      <img class="w-16 rounded-lg" src="${all.image}" alt="" />
             </figure>
             <div class="card-body">
               <div class="flex gap-4">
@@ -57,11 +57,9 @@ const postDisply = alls => {
                   </li>
                 </ul>
 
-
               </div>
             </div>
-   
-    
+
     `;
     allContainer.appendChild(allCard);
   });
@@ -84,7 +82,7 @@ const displyPost = posts => {
     console.log(post);
     //  create a div
     const postCard = document.createElement('div');
-    postCard.classList = `card w-96 bg-base-100 shadow-xl`;
+    postCard.classList = `card w-96 bg-base-100 shadow-xl mb-4 `;
     postCard.innerHTML = ` <figure>
                 <img src="${post.cover_image}" alt="Shoes" />
               </figure>
@@ -93,12 +91,17 @@ const displyPost = posts => {
       <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
     </svg>
     ${post.author.posted_date}</h2>
-                <p class"">${post.title}</p>
+                <h1 class=font-extrabold>${post.title}</h1>
                 <div class="card-actions ">
                 <p> ${post.description}</p>
                 </div>
+
+                <div class="grid grid-cols-2">
+
                 <div>
-                <p>${post.profile_image}</p>
+                <img class="w-16 rounded-full" src="${post.profile_image}" alt="">
+                </div>
+
                <div>
                 <p>${post.author.name}</p>
                <p>${post.author.designation}</p>
