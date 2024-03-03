@@ -6,91 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ReTro</title>
   <!-- font awesome icon cdn  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
   <!-- tailwind CSS and daisy UI CDN -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Other meta tags and stylesheets -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <style>
-    /* Custom CSS for spacing */
-    .spacer {
-      height: 50px;
-      /* Adjust the height as needed */
-    }
-  </style>
+
+
 </head>
 
 <body class="container mx-auto">
-  <header>
-    <!-- Navbar -->
-    <div class="navbar bg-base-100 flex justify-between">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
-          </div>
-        </div>
-        <a class="btn btn-ghost text-2xl lg:text-4xl font-extrabold font-manrope">ReTro</a>
-      </div>
-      <div class="navbar-end flex items-center">
-        <ul class="menu menu-horizontal px-1 flex items-center">
-          <li><a class="tooltip" data-tooltip="Home"><i class="fas fa-home"></i> </a></li>
-          <li><a class="tooltip" data-tooltip="Edit"><i class="fas fa-edit"></i> </a></li>
-          <li><a class="tooltip" data-tooltip="Add"><i class="fas fa-plus"></i> </a></li>
-          <li><a class="tooltip" data-tooltip="Blog"><i class="fas fa-blog"></i></a></li>
-        </ul>
-        <!-- You can add an image or icon for sign-in here -->
-        <a class="btn bg-[#797DFC] text-white">Sign In</a>
-      </div>
-    </div>
-    <!-- Spacer -->
-    <div class="spacer"></div>
-    <!-- Banner -->
-    <section class="relative bg-cover bg-center mt-8" style="background-image: url('images/bgbanner.png');">
-      <div class=" my-4 rounded-3xl h-[500px] w-full"
-        style="background-image: url(images/banner.png); background-color: #12132D;">
-        <!-- <div class="hero-overlay bg-opacity-60"></div> -->
-        <div class="hero-content flex justify-evenly  text-neutral-content">
-          <div class="max-w-md ">
-            <h1 class="mb-5 mt-20 text-white text-6xl font-bold">Welcome to the <span
-                class="text-[#797DFCFF]">ReTro</span>
-              Forum</h1>
-            <p class="mb-5">Share your favourite opinion and win and wp <br>forum cofee mug!</p>
-            <label class="input input-bordered h-14 flex items-center gap-2 mt-8 rounded-full">
-              <input type="text" class="grow text-black" placeholder="Search here anything" />
 
-              <button class="bg-[#797DFC] w-28 text-white text-xl font-medium h-8 rounded-full">Search</button>
-            </label>
-          </div>
-          <div class="bg-[#FFFFFF] w-[280px]  h-[210px]  mt-20 rounded-2xl text-[#12132DCC]">
-            <div class="mt-4 space-y-3 text-2xl   px-8">
-              <div class="flex justify-between ">
-                <h3>Registered users</h3>
-                <span>o1</span>
-              </div>
-              <div class="flex justify-between">
-                <h3>Forum</h3>
-                <span>o5</span>
-              </div>
-              <div class="flex justify-between">
-                <h3>Topics</h3>
-                <span>o1</span>
-              </div>
-              <div class="flex justify-between">
-                <h3>Replies</h3>
-                <span>o1</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-  </header>
   <main>
     <!-- letests post section -->
     <section>
@@ -100,12 +25,16 @@
         integrated testing features allow
         for a
         streamlined .</p>
+      <div id="post-container">
+
+      </div>
     </section>
   </main>
 
   <footer>
 
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
