@@ -20,10 +20,10 @@ const displyPost = posts => {
             <img src="${post.cover_image}" alt="Shoes" />
           </figure>
           <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+            <h2 class="card-title"></h2>
+            <p>${post.description}</p>
+            <div class="card-actions ">
+            <p> ${post.profile_image}</p>
             </div>
           </div>`;
     postContainer.appendChild(postCard);
