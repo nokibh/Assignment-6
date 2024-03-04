@@ -11,6 +11,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- font awesome cdn link -->
   <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- tailwind custom css -->
   <script>
     tailwind.config = {
       theme: {
@@ -131,9 +132,10 @@
           <p class="text-base text-white py-4">Share your favorite opinion and win and wp forum coffee mug!
           </p>
           <div class="py-6">
-            <input class="px-4 lg:px-6 py-5 w-full  rounded-full" type=" text" placeholder="Search here anything">
-            <button
-              class="font-inter-600 bg-blue-300 text-white px-6 lg:px-12 py-3 rounded-full left-1/3 lg:left-2/3 bottom-14 relative">Search</button>
+            <input id="search-field" class="px-4 lg:px-6 py-5 w-full  rounded-full" type=" text"
+              placeholder="Search here anything">
+            <button onclick="searchButton()"
+              class="font-inter-600 bg-blue-700 text-white px-6 lg:px-12 py-3 rounded-full left-1/3 lg:left-2/3 bottom-14 relative">Search</button>
           </div>
 
         </div>
