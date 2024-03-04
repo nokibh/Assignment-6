@@ -1,7 +1,8 @@
-const loadPost = async searchPost => {
+const loadPost = async search => {
   const res = await fetch(
-    `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchPost}`
+    `https://openapi.programming-hero.com/api/retro-forum/posts?category=${search}`
   );
+
   const data = await res.json();
   const alls = data.posts;
   // console.log(allposts);
@@ -50,7 +51,7 @@ const postDisply = alls => {
                     </svg>${all.posted_time}
                   </li>
                   <li>
-                   <button id="sms" class="text-[#10B981] ">
+                   <button onclick="addBtn('${all.title}','${all.view_count}')" id="sms" class="text-[#10B981] ">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
 </svg>
@@ -65,6 +66,7 @@ const postDisply = alls => {
     allContainer.appendChild(allCard);
   });
 };
+// loadPost();
 // search option
 const searchButton = () => {
   const searchFil = document.getElementById('search-field');
@@ -73,7 +75,17 @@ const searchButton = () => {
   loadPost(searchPost);
 };
 // loadPost();
+// botton add
+const titleAdd = document.getElementById('title-add');
+const addBtn = (title, view) => {
+  const createDiv = document.createElement('div');
+  createDiv.classList = `flex items-center justify-between`;
+  createDiv.innerHTML = ` <p>${title}</p>
+            <p><i class="fa-regular fa-eye"></i>${view}</p>`;
+  titleAdd.appendChild(createDiv);
+};
 // latest post
+
 const latestPost = async () => {
   const res = await fetch(
     'https://openapi.programming-hero.com/api/retro-forum/latest-posts'
@@ -119,4 +131,6 @@ const displyPost = posts => {
     postContainer.appendChild(postCard);
   });
 };
+
 latestPost();
+loadPost('');
