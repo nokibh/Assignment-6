@@ -67,18 +67,30 @@ const postDisply = alls => {
     `;
     allContainer.appendChild(allCard);
   });
+  // hide loading spinner
+  toggleLoadingDot(false);
 };
 // loadPost();
 // search option
 const searchButton = () => {
+  toggleLoadingDot(true);
   const searchFil = document.getElementById('search-field');
   const searchPost = searchFil.value;
   console.log(searchPost);
   loadPost(searchPost);
 };
+// loading funtion
+const toggleLoadingDot = isDot => {
+  const loadingDot = document.getElementById('loading-dot');
+  if (isDot) {
+    loadingDot.classList.remove('hidden');
+  } else {
+    loadingDot.classList.add('hidden');
+  }
+};
 // loadPost();
-// botton add
 
+// botton add
 const titleAdd = document.getElementById('title-add');
 
 const addBtn = (title, view) => {
