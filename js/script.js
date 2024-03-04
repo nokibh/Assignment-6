@@ -83,9 +83,9 @@ const titleAdd = document.getElementById('title-add');
 
 const addBtn = (title, view) => {
   const createDiv = document.createElement('div');
-  createDiv.classList = `flex items-center justify-between`;
+  createDiv.classList = `flex items-center justify-between bg-white rounded-lg`;
   createDiv.innerHTML = ` <p>${title}</p>
-            <p class="flex"><i class="fa-regular fa-eye"></i>${view}</p>`;
+            <p class="flex gap-1 p-1"><i class="fa-regular fa-eye"></i>${view}</p>`;
   titleAdd.appendChild(createDiv);
 };
 // latest post
