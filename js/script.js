@@ -92,14 +92,18 @@ const toggleLoadingDot = isDot => {
 
 // botton add
 const titleAdd = document.getElementById('title-add');
-
+const count = document.getElementById('count');
+let incriment = parseInt(count.innerText.trim(), 10) || 0;
 const addBtn = (title, view) => {
   const createDiv = document.createElement('div');
   createDiv.classList = `flex items-center justify-between bg-white rounded-lg`;
   createDiv.innerHTML = ` <p>${title}</p>
             <p class="flex gap-1 p-1"><i class="fa-regular fa-eye"></i>${view}</p>`;
   titleAdd.appendChild(createDiv);
+  incriment++;
+  count.innerText = incriment;
 };
+
 // latest post
 
 const latestPost = async () => {
