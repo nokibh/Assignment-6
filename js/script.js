@@ -18,9 +18,11 @@ const postDisply = alls => {
     allCard.classList = `card card-side bg-[#e6e6fa]
     shadow-xl mb-5`;
     allCard.innerHTML = `
-      <figure class= "h-20 w-16 pl-2 mt-4 ">
-      <img class="w-16 rounded-lg" src="${all.image}" alt="" />
-            </figure>
+     <div class="avatar online">
+  <div class="w-16 rounded-lg h-12">
+    <img src="${all.image}" />
+  </div>
+</div>
             <div class="card-body">
               <div class="flex gap-4">
                 <p>#${all.category}</p>
@@ -76,12 +78,14 @@ const searchButton = () => {
 };
 // loadPost();
 // botton add
+
 const titleAdd = document.getElementById('title-add');
+
 const addBtn = (title, view) => {
   const createDiv = document.createElement('div');
   createDiv.classList = `flex items-center justify-between`;
   createDiv.innerHTML = ` <p>${title}</p>
-            <p><i class="fa-regular fa-eye"></i>${view}</p>`;
+            <p class="flex"><i class="fa-regular fa-eye"></i>${view}</p>`;
   titleAdd.appendChild(createDiv);
 };
 // latest post
